@@ -25,7 +25,7 @@ exports.signup = (req, res, next) => {
 			}).save();
 		})
 		.then((result) => {
-			res.status(201).json({ message: 'User Created!', userId: result._id });
+			res.status(201).json({ message: 'User Created!'});
 		})
 		.catch((err) => errorHandler(err, next));
 };
@@ -55,7 +55,7 @@ exports.login = (req, res, next) => {
 				'thisissupersupersupersecretkeytogeneratethetoken',
 				{ expiresIn: '2h' }
 			);
-			res.status(200).json({ token, userId: loadedUser._id.toString() });
+			res.status(200).json({ token });
 		})
 		.catch((err) => errorHandler(err, next));
 };
