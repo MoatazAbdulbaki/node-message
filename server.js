@@ -9,7 +9,7 @@ const authRoutes = require('./routes/auth');
 const app = express();
 
 const MONGODB_URI =
-	'mongodb+srv://moatazabdalbaky:EhIinEffQubLk3IB@cluster0.tbhwzun.mongodb.net/message?retryWrites=true&w=majorit';
+	'mongodb+srv://moatazabdalbaky:EhIinEffQubLk3IB@cluster0.tbhwzun.mongodb.net/message?retryWrites=true';
 
 // middleware to parse json requist
 app.use(bodyParser.json());
